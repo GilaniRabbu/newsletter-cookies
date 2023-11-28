@@ -1,0 +1,251 @@
+:root {
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    color: #343940;
+    background-color: #F2B591;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+img,
+svg,
+video,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    max-width: 600px;
+    padding: 2em 1em;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 0.25em;
+    background-color: #F0F1F2;
+}
+
+.col-1 {
+    width: 30%;
+}
+
+.col-2 {
+    width: 70%;
+    padding: 1em 2.5em 1em 1em;
+}
+
+.mail-img {
+    width: 128px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: var(--size-base);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+}
+
+.desc {
+    font-size: var(--size-sm);
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.input-box input {
+    color: #343940;
+    background-color: #F0F1F2;
+    padding: 0.5em 1em;
+    outline: none;
+    border: 1px solid #BBC6D3;
+    border-radius: 0.15em;
+}
+
+.input-box button {
+    color: #F0F1F2;
+    background-color: #343940;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.15em;
+}
+
+.input-box button:hover {
+    color: #F2C438;
+}
+
+.checkbox input {
+    cursor: pointer;
+}
+
+.checkbox span {
+    font-size: var(--size-xs);
+    font-weight: 500;
+}
+
+.cookies {
+    color: #F0F1F2;
+    background-color: #343940;
+    max-width: 350px;
+    font-size: var(--size-xs);
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    border-radius: 0.25em;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+.cookies-desc {
+    line-height: 1.5;
+}
+
+.cookies-2 a {
+    text-decoration: none;
+    color: #F25E3D;
+}
+
+.cookies-2 a:hover {
+    text-decoration: underline;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.cookies-2 button {
+    color: #F0F1F2;
+    background-color: #F25E3D;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.15em;
+}
+
+.cookies-2 button:hover {
+    color: #343940;
+    background-color: #F2C438;
+}
+
+.cookies-enter {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cookies-leave {
+    animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 0.5em;
+        max-width: 400px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-1 {
+        width: 100%;
+    }
+
+    .col-2 {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .input-box {
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .cookies {
+        position: fixed;
+        top: 1em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: 80px;
+        padding: 0.2em 0.5em;
+        gap: 0;
+        border-radius: 0;
+    }
+
+    .cookies-1 {
+        display: none;
+    }
+
+    .btn-group {
+        margin-top: 0.25em;
+    }
+
+    .cookies-2 button {
+        color: #F25E3D;
+        background-color: #F0F1F2;
+        text-transform: uppercase;
+        padding: 0.25em;
+        border-radius: 0.15em;
+    }
+}
